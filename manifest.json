@@ -1,0 +1,65 @@
+{
+   "action": {
+      "default_icon": {
+         "19": "NoteBoard.png"
+      },
+      "default_title": "__MSG_extName__"
+   },
+   "author": "Oscar de Dios",
+   "background": {
+      "service_worker": "sw/backgroundSw.js"
+   },
+   "commands": {
+      "captura-pantalla": {
+         "description": "Capture screen",
+         "global": false,
+         "suggested_key": {
+            "default": "Ctrl+Shift+3",
+            "mac": "Command+Shift+3"
+         }
+      },
+      "captura-pantalla-activa": {
+         "description": "Capture active screen",
+         "global": false,
+         "suggested_key": {
+            "default": "Ctrl+Shift+2",
+            "mac": "Command+Shift+2"
+         }
+      },
+      "nueva-nota-web": {
+         "description": "Create new Note in web",
+         "global": false,
+         "suggested_key": {
+            "default": "Ctrl+Shift+1",
+            "mac": "Command+Shift+1"
+         }
+      }
+   },
+   "content_security_policy": {
+      "sandbox": "sandbox allow-scripts; script-src 'self' https://www.gstatic.com https://fonts.googleapis.com https://apis.google.com https://ajax.googleapis.com https://www.google.com https://note-board-web.firebaseio.com https://*.firebaseio.com; object-src 'self'"
+   },
+   "default_locale": "en",
+   "description": "__MSG_extName__",
+   "homepage_url": "https://www.noteboardapp.com",
+   "icons": {
+      "128": "NoteBoard.png"
+   },
+   "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDEQKzLHa+PtaRsxMI9HI+tjVlAuQkFjy1824eR+nQ8bzo+yt97iceCE9SkQeSlx7YzEhCCr9jWWPI0iPYuA0im6X5L4z2urd0G80GIQ7ctUd1JWOrKu+G6CTaNog6PovAWa1iM6VV8F0zYKeg5dcr1pXW0ugMkD4BvA5IEp9FLBwIDAQAB",
+   "manifest_version": 3,
+   "name": "__MSG_extName__",
+   "oauth2": {
+      "client_id": "409932428860-djmrl7hfsuk4fo55s474bt48l3p37o0h.apps.googleusercontent.com",
+      "scopes": [ "https://www.googleapis.com/auth/userinfo.profile", "https://www.googleapis.com/auth/userinfo.email" ]
+   },
+   "offline_enabled": true,
+   "optional_host_permissions": [ "https://www.noteboardapp.com/", "http://*/*", "https://*/*" ],
+   "optional_permissions": [ "tabs", "background", "clipboardRead", "desktopCapture", "identity", "identity.email" ],
+   "options_page": "options.html",
+   "permissions": [ "contextMenus", "unlimitedStorage", "activeTab", "storage", "scripting", "alarms", "offscreen" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "9.0.21",
+   "web_accessible_resources": [ {
+      "matches": [ "\u003Call_urls>" ],
+      "resources": [ "tiny_mce/themes/advanced/anchor.htm", "tiny_mce/plugins/advimage/image.htm", "tiny_mce/plugins/table/table.htm", "tiny_mce/themes/advanced/source_editor.htm", "tiny_mce/plugins/advlink/link.htm", "tiny_mce/themes/advanced/color_picker.htm", "jquery/jquery-ui.min.css", "jquery/images/*", "NoteBoard.png", "appimg/*" ]
+   } ]
+}

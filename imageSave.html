@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<head>
+  <title>Note Board Crop Capture</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <script src="jquery/jquery-2.0.3.min.js" type="text/javascript"></script>
+  <script src="imageSave.js" type="text/javascript"></script>
+  <script src="utilCompartir.js" type="text/javascript"></script>
+  <script src="modales.js" type="text/javascript"></script>
+  <script src="varios.js" type="text/javascript"></script>
+
+  <script src="lib/materialize/materialize.min.js" type="text/javascript"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="lib/materialize/materialize.css" rel="stylesheet" type="text/css" />
+
+  <link rel="stylesheet" href="lib/materialComponents/material-components-web.min.css">
+  <script src="lib/materialComponents/material-components-web.min.js"></script>
+
+  <link href="imageSave.css" rel="stylesheet" type="text/css" />
+</head>
+  <body>
+    <div class="title-container"><h4 data-locale="imageSave_title">Crear nota con área seleccionada</h4></div>
+    <div class="instructions" data-locale="imageSave_instructions">
+      Puedes crear la nota con la imágen como un link a la url
+      donde se haya capturado o añadir el link en modo texto a la nota.
+    </div>
+    <div class="form-container">
+      <form action="#">
+        <div class="link-section">
+          <div><span data-locale="imageSave_addLink">¿Añadir link </span><a class="link-url" id="url-captura" target="_blank"></a>?</div>
+          <div class="seleccion-link">
+            <div><label><input type="checkbox" id="linkImagen"/><span data-locale="imageSave_conLink">Imagen con link</span></label></div>
+            <div><label><input type="checkbox" id="linkTexto"/><span data-locale="imageSave_conLinkTexto">Añadir texto con link</span></label></div>
+          </div>
+        </div>
+
+        <div class="mdc-text-field mdc-text-field--textarea mdc-text-field--outlined mdc-text-field--fullwidth">
+          <textarea id="textoImagen" class="mdc-text-field__input" rows="2" cols="70"></textarea>
+          <div class="mdc-notched-outline">
+            <div class="mdc-notched-outline__leading"></div>
+            <div class="mdc-notched-outline__notch">
+              <label for="textarea" class="mdc-floating-label" data-locale="imageSave_placeHolderTexto">Opcionalmente puedes añadir texto a la nota</label>
+            </div>
+            <div class="mdc-notched-outline__trailing"></div>
+          </div>
+        </div>
+
+        <div class="opciones-captura">
+          <div class="input-field row">
+            <span data-locale="imageSave_creaNota">Crear nota con la imagen seleccionada en el tablón:</span>
+            <div class="input-field inline" id="tablones"></div>
+          </div>
+
+          <div><span data-locale="imageSave_anyadirNota">O añade la imagen a la nota número:</span>
+            <div class="num-nota-field mdc-text-field mdc-text-field--outlined">
+            <input type="number"  min="1" max="100" id="numNota" name="numNota" class="mdc-text-field__input" />
+            <div class="mdc-notched-outline">
+              <div class="mdc-notched-outline__leading"></div>
+              <div class="mdc-notched-outline__notch">
+                <label class="mdc-floating-label" data-locale="imageSave_numNota">Número nota</label>
+              </div>
+              <div class="mdc-notched-outline__trailing"></div>
+            </div>
+            </div>
+            <div class="mdc-text-field-helper-line">
+              <div class="mdc-text-field-helper-text" data-locale="imageSave_ayudaaAnyadir">El número de lo nota lo puedes saber al pasar el ratón por la parte superior de una nota</div>
+            </div>
+          </div>
+
+          <div class="nota-en-edicion row">
+            <label><input type="checkbox" id="nota-en-edicion"/><span data-locale="imageSave_anyadirEdicion">Añadir en nota en edición</span></label>
+          </div>
+
+        </div>
+
+        <div class="error-message">
+          Error!!!
+        </div>
+        <div class="botones">
+          <button
+            class="accept-btn btn waves-effect waves-light teal lighten-5 green-text text-darken-2"
+            id="botonVolver"
+            type="submit"
+            name="action"
+            data-locale="imageSave_volver"
+          >
+            Volver a seleccionar
+            <i class="material-icons left">arrow_back</i>
+          </button>
+          <button
+            class="accept-btn btn waves-effect waves-light"
+            id="botonAceptar"
+            type="submit"
+            name="action"
+            data-locale="imageSave_crear"
+          >
+            Crear Nota
+            <i class="material-icons right">send</i>
+          </button>
+          <div class="switch switch-inferior">
+            <label>
+              <span data-locale="imageSave_noAbrir">No abrir Note Board al crear la nota</span>
+              <input type="checkbox" id="abrir">
+              <span class="lever"></span>
+              <span data-locale="imageSave_abrir">Abrir</span>
+            </label>
+          </div>
+        </div>
+      </form>
+      <div class="area-imagen-captura">
+        <h2 data-locale="imageSave_imagenCapturada">Imagen capturada</h2>
+        <img id="captura" class="captura-loading" src='appimg/ajax-loader2.gif'/>
+      </div>
+    </div>
+  </body>
+</html>

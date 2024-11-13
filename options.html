@@ -1,0 +1,137 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<meta property="og:type" content="Chrome Web Store Web Application" />
+<meta property="og:url" content="https://chrome.google.com/webstore/detail/goficmpcgcnombioohjcgdhbaloknabb" />
+<meta property="og:image" content="http://lh6.ggpht.com/J6TpaWHsxbsFFsSxZcr_SR0QP5XoJ1pPoDVBF4vvI_PY5WL8avS7fUUo1kQUkL4VhJZxdLi9Ki4" />
+<head><title>Notes Board Options</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
+<script src="jquery/jquery-2.0.3.min.js" type="text/javascript"></script>
+<link rel="stylesheet" href="lib/materialComponents/material-components-web.min.css">
+<script src="lib/materialComponents/material-components-web.min.js"></script>
+<link href="options.css?v=5" rel="stylesheet" type="text/css" />
+<script src="jquery/jquery-ui.min.js" type="text/javascript"></script>
+<link href="jquery/jsocial.css" rel="stylesheet" type="text/css" />
+<script src="optionsMin.js" type="text/javascript"></script>
+
+<!--Tool Tip-->
+<link rel="Stylesheet" type="text/css" href="jquery/tooltipster.bundle.min.css" />
+<script type="text/javascript" src="jquery/tooltipster.bundle.min.js"></script>
+
+<link rel="icon" href="NoteBoard.png" />
+
+</head>
+
+<body>
+<div class="contenedor">
+<div class="post">
+		<h1 id='titulo'></h1>
+
+<!--<div id="donacion">-->
+<!--		<span id="mensaje-donacion"></span>-->
+<!--		<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">-->
+<!--				<input type="hidden" name="cmd" value="_s-xclick">-->
+<!--				<input type="hidden" name="hosted_button_id" value="T3MNHU2FHHYE6">-->
+<!--				<input type="image" width="150" src="appimg/donate_PNG25.png" border="0" name="submit" alt="PayPal. La forma rápida y segura de pagar en Internet.">-->
+<!--				<input type="hidden" name="currency_code" value="USD">-->
+<!--				<input type="hidden" id="paypal-language" name="lc" value="en_US">-->
+<!--				<img alt="" border="0" src="https://www.paypal.com/en_ES/i/scr/pixel.gif" width="1" height="1">-->
+<!--		</form>-->
+<!--</div>-->
+
+<!--<div id="creada">Extension by <a href="http://oscapps.com" target="_blank">Oscapps</a></div>-->
+<div id="options"></div>
+
+<!--    <div class="promo" id="promo2">-->
+<!--        <div class="tituloPubli">Publicidad</div>-->
+<!--        <div class="tituloPubli2">Papeleria bonita, diseñadores de uno de nuestros fondos</div>-->
+<!--        <a href="https://manutsi.com/tienda" target="_blank" id="manutsi-banner"><img src="appimg/bannerManutsi.jpg"></a>-->
+<!--    </div>-->
+
+    <div id="seleccion-temas">
+        <div class="idioma-castellano">
+            <h2 id="seleccion-texto">Selección de temas</h2>
+            <p>Escoge el color o textura de la barra de opciones superior</p>
+        </div>
+        <div class="idioma-ingles">
+            <h2 id="seleccion-texto">Selection of themes</h2>
+            <p>Choose the color or texture of the upper options bar</p>
+        </div>
+        <form action="">
+            <div class="seleccion-opcion"><input type="radio" name="seleccion-tema" value="default" checked><img class="seleccion-color" src="/appimg/top-background.jpg"></div>
+            <div class="seleccion-opcion"><input type="radio" name="seleccion-tema" value="metal"><img class="seleccion-color" src="/appimg/temas/metallic-texture.jpg"></div>
+            <div class="seleccion-opcion"><input type="radio" name="seleccion-tema" value="piedra"><img class="seleccion-color" src="/appimg/temas/piedra.jpg"></div>
+            <div class="seleccion-opcion"><input type="radio" name="seleccion-tema" value="marmol"><img class="seleccion-color" src="/appimg/temas/marmol.jpg"></div>
+            <div class="seleccion-opcion"><input type="radio" name="seleccion-tema" value="lava"><img class="seleccion-color" src="/appimg/temas/lava.jpg"></div>
+            <div class="seleccion-opcion"><input type="radio" name="seleccion-tema" value="colorNegro"><div class="seleccion-color negro"></div></div>
+            <div class="seleccion-opcion"><input type="radio" name="seleccion-tema" value="colorGris"><div class="seleccion-color gris"></div></div>
+            <div class="seleccion-opcion"><input type="radio" name="seleccion-tema" value="colorAzul"><div class="seleccion-color azul"></div></div>
+            <div class="seleccion-opcion"><input type="radio" name="seleccion-tema" value="colorVerde"><div class="seleccion-color verde"></div></div>
+            <div class="seleccion-opcion"><input type="radio" name="seleccion-tema" value="colorBlanco"><div class="seleccion-color blanco"></div></div>
+        </form>
+    </div>
+
+<!--    <p id="titulo-kanban"></p>-->
+<!--    <iframe id="kanban-board" src ="https://noteboardapp.com/redirect.php?url=http://www.tablondenotas.com/board?user=bugsideas&hideBar" width="95%" height="600" allowfullscreen="allowfullscreen"></iframe>-->
+
+    <div id="correo">
+        <iframe id="correoEsp" class="correoIframe" src="https://docs.google.com/forms/d/e/1FAIpQLSfIlEAGJh2lMYCw9hah0cQYURezICZ8Iy1NrkfuU0nWdNMCPQ/viewform?embedded=true" width="760" height="1000" frameborder="0" marginheight="0" marginwidth="0">Cargando...</iframe>
+        <iframe id="correoEng" class="correoIframe" src="https://docs.google.com/forms/d/e/1FAIpQLSe5ioalcWHSW5TOqt-x1vF_rlxF9gIB3SraGOy1s4zz7FhgeQ/viewform?embedded=true" width="760" height="1000" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+        <!--
+<div id="mensCorreo"></div>
+<label id='fromLabel'></label><br><input type="text" id="from" size="30"></input>
+<br><label id='mensLabel'></label><br>
+<textarea id="textoCorreo" cols="30" rows="5"></textarea><br><br>
+<input type="submit" id="enviar" value=" Send ">
+<input type="reset" id="borrar" value=" Clear "><label id='mensUsu'></label>
+</div>
+-->
+    </div>
+
+
+		<div id="madeBy"><div class="social">Extension made by<br><b>Oscar de Dios</b><br><br></div>
+<style>.ig-b- { display: inline-block; }
+.ig-b- img { visibility: hidden; }
+.ig-b-:hover { background-position: 0 -60px; } .ig-b-:active { background-position: 0 -120px; }
+.ig-b-32 { margin: 5px; width: 32px; height: 32px; background: url(http://badges.instagram.com/static/images/ig-badge-sprite-32.png) no-repeat 0 0; }
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+.ig-b-32 { background-image: url(http://badges.instagram.com/static/images/ig-badge-sprite-32@2x.png); background-size: 60px 178px; } }</style>
+<a href="http://instagram.com/oscardrbcn?ref=badge" class="ig-b- ig-b-32"><img src="http://badges.instagram.com/static/images/ig-badge-32.png" alt="Instagram" /></a>
+			 <br><br>Powered by<br><a href="http://www.tinymce.com/" target="_blank"><img src="appimg/tinymce.png"/ width="80"></a>
+			 <br><br><a href="http://subtlepatterns.com/">http://subtlepatterns.com/</a>
+		</div>
+
+<div class="clear"></div>
+		<a name="video"></a>
+	<div class="fluid_container">
+	</div>
+
+
+
+<div class="clear"></div>
+
+
+
+			<!-- <div id="mens"></div> -->
+	<!-- 	<div class="clear"></div> -->
+
+			<div id="dialog-confirm" title="Empty the recycle bin?"></div>
+		<div class="clear"></div>
+
+<div class="newPopup" id="newPopup"></div>
+
+		<!-- <div class="changeLog" id="changeLog"></div> -->
+
+
+
+<div class="clear"></div>
+		</div>
+
+<div class="clear"></div>
+
+</div>
+
+</div> <!-- contenedor -->
+<canvas id="canvas" width="19" height="19"></canvas>
+</body>
+</html>
